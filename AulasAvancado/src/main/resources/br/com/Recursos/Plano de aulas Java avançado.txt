@@ -1,0 +1,12 @@
+1. Relembrando Java EE - 4 horas
+2. Servlets - 6 horas
+3. CDI (Java EE) - 2 horas
+4. JPA (Hibernate) - 4 horas
+5. EJB (Java EE) - 2 horas
+6. JAX-WS (SOAP Web Services) - 6 horas
+7. JAX-RS (RESTful Web Services) - 4 horas
+8. JSF (Hibernate) - 4 horas
+9. JMS - 4 horas
+10. Security - 4 horas
+
+40 horas - 20 aulas
