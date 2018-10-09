@@ -6,4 +6,14 @@
   <packaging>war</packaging>
   <name>Java Avançado</name>
   <description>Curso avançado Java</description>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+  </dependencies>
 </project>
