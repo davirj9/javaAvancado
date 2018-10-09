@@ -4,9 +4,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
-
 /**
  * Não havendo um arquivo beans.xml para explicitamente ligar o suporte a CDI,
  * para que uma classe possa ser injetada usando @Inject, ela deve declarar
@@ -15,8 +12,6 @@ import javax.inject.Named;
  * registrado por default é o nome da classe, com a primeira letra minúscula (ou
  * sem alterações, se começar com duas letras maiúsculas).
  */
-@RequestScoped
-@Named
 public class Biblioteca {
 
     // Os próximos três membros da classe são static, e portanto executados

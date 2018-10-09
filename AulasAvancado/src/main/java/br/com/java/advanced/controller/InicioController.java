@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.java.advanced.bo.BibliotecaBO;
 import br.com.java.advanced.entity.Biblioteca;
 import br.com.java.advanced.entity.Livro;
 
@@ -23,7 +24,7 @@ public class InicioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-    private Biblioteca biblioteca;  // Isto é possível porque o bean está registrado em CDI (declara um escopo)
+    private BibliotecaBO bibliotecaBO;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -33,6 +34,8 @@ public class InicioController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.print("Aula 01.");
 
+		Biblioteca biblioteca = bibliotecaBO.consultaBiblioteca();
+		
 		out.println("<table border=1>");
         for (Livro livro : biblioteca.getLivros()) {
             out.println("<tr>");
