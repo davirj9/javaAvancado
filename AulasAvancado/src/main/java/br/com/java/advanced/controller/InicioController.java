@@ -3,6 +3,7 @@ package br.com.java.advanced.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ import br.com.java.advanced.entity.Livro;
  *
  */
 @WebServlet("/InicioController")
+@RequestScoped
 public class InicioController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
