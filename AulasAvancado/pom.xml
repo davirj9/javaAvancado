@@ -7,13 +7,16 @@
   <name>Java Avançado</name>
   <description>Curso avançado Java</description>
   
+  	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+ 	 </properties>
+  
   <dependencies>
   	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>javax.servlet-api</artifactId>
-	    <version>3.0.1</version>
-	    <scope>provided</scope>
+		<groupId>javax</groupId>
+		<artifactId>javaee-api</artifactId>
+		<version>7.0</version>
 	</dependency>
-	
   </dependencies>
 </project>
