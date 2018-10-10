@@ -11,6 +11,8 @@
 		<p>Consulte um livro:</p>
 		<input type="text" name="livro">
 		<input type="submit" value="Enviar">
+		
+		<%= application.getMajorVersion() %>.<%= application.getMinorVersion() %>
 	</form>
 </body>
 </html>
