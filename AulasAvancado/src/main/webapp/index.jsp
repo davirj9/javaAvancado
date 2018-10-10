@@ -2,11 +2,15 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Aula java avançado</title>
+	</head>
 <body>
-Bem vindo ao mundo Java EE.
+	<form action="/AulasAvancado/inicio" method="post">
+		<p>Consulte um livro:</p>
+		<input type="text" name="livro">
+		<input type="submit" value="Enviar">
+	</form>
 </body>
 </html>
