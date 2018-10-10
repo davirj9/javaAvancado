@@ -32,7 +32,7 @@ public class InicioController extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setContentType("text/html; charset=UTF-8");
+		/*response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
 		
 		Biblioteca biblioteca = bibliotecaBO.consultaBiblioteca();
@@ -49,7 +49,9 @@ public class InicioController extends HttpServlet {
             out.println("</tr>");
         }
         out.println("</table>");
-        out.close();
+        out.close();*/
+		
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
         
 	}
 	
