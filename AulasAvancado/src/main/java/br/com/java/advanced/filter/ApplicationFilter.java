@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -16,9 +17,15 @@ import javax.servlet.http.HttpSession;
  * @author DaviMacana
  *
  */
-@WebFilter
+@WebFilter(filterName = "applicationFilter" ,urlPatterns = {"/inicio", "/*.jsp"})
 public class ApplicationFilter implements Filter {
 
+	//FilterConfig config;  
+	  
+	public void init(FilterConfig config) throws ServletException {  
+	    //this.config=config;  
+	} 
+	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
