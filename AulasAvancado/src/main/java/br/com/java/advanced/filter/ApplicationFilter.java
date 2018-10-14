@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author DaviMacana
+ * @author Davi Maçana
  *
  */
 @WebFilter(filterName = "applicationFilter" ,urlPatterns = {"/inicio", "/*.jsp"})

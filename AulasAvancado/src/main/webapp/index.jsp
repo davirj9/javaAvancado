@@ -2,15 +2,16 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Aula java avançado</title>
-	</head>
+	<%@ include file="template/header.jsp"%>
 <body>
-	<form action="/AulasAvancado/inicio" method="post">
-		<p>Consulte um livro:</p>
-		<input type="text" name="livro">
-		<input type="submit" value="Enviar">
-	</form>
+	<%-- <%@ include file="template/menu.jsp"%> --%>
+	<div class="container">
+		<form action="/AulasAvancado/inicio" method="post">
+			<p>Consulte um livro:</p>
+			<input type="text" name="livro">
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+	<%-- <%@ include file="template/footer.jsp"%> --%>
 </body>
 </html>

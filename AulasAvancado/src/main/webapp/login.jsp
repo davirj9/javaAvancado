@@ -2,32 +2,41 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Aula java avançado</title>
-		<style type="text/css">
-		  @import url("css/login.css");
-		</style>
-	</head>
+	<%@ include file="template/header.jsp"%>
+	<link rel="stylesheet" href="template/css/login.css" type="text/css" />
 <body>
-	<form action="/AulasAvancado/login" method="post">
-		<div class="container">
-	    <label for="usuario"><b>Usuario</b></label>
-	    <input type="text" placeholder="Insira seu usuario" name="usuario" required>
-	
-	    <label for="senha"><b>Senha</b></label>
-	    <input type="password" placeholder="Insira sua senha" name="senha" required>
-	
-	    <button type="submit">Login</button>
-	    <label>
-	      <input type="checkbox" checked="checked" name="remember"> Remember me
-	    </label>
-	  </div>
-	
-	  <div class="container" style="background-color:#f1f1f1">
-	    <button type="button" class="cancelbtn">Cancel</button>
-	    <span class="psw">Forgot <a href="#">password?</a></span>
-	  </div>
-	</form>
+	<div id="form-container" align="center">
+		<form action="/AulasAvancado/login" method="post">
+		       <h1 class="text-center">Login</h1>
+		
+		       <div class="form-group">
+		           <label class="sr-only" for="login">Usuário</label>
+		           <div class="input-group">
+		               <div class="input-group-addon">
+		                   <span class="glyphicon glyphicon-user"></span>
+		               </div>
+		               <input type="text" name="usuario" class="form-control" placeholder="Seu login de usuário" required="required">
+		           </div>
+		       </div>
+		
+		       <div class="form-group">
+		           <label class="sr-only" for="senha">Senha</label>
+		           <div class="input-group">
+		               <div class="input-group-addon">
+		                   <span class="glyphicon glyphicon-lock"></span>
+		               </div>
+		               <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required="required">
+		           </div>
+		       </div>
+		
+		       <div class="form-group">
+		           <input type="submit" value="Entrar" class="btn btn-success form-control">
+		       </div>
+		
+		       <div class="form-group">
+		           Não é registrado? <a href="cadastro.html">Crie uma conta</a>.
+		       </div>
+		   </form>
+    </div>
 </body>
 </html>
