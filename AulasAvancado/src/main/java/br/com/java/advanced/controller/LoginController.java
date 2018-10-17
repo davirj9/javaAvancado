@@ -1,9 +1,11 @@
 package br.com.java.advanced.controller;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,13 +24,14 @@ import br.com.java.advanced.qualifier.ServicoLogin;
  */
 @ViewScoped
 @WebServlet(name = "login", urlPatterns = { "/login"})
-public class LoginController extends HttpServlet {
+@Named
+public class LoginController extends HttpServlet implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
 	@QualificadorLogin
-	private ServicoLogin servicoLogin;
+	private transient ServicoLogin servicoLogin;
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,5 +54,4 @@ public class LoginController extends HttpServlet {
 		}
 		((HttpServletResponse) response).sendRedirect(((HttpServletRequest) request).getContextPath() + "/inicio");
 	}
-	
 }

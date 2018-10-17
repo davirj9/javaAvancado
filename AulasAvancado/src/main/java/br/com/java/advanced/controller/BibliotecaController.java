@@ -2,8 +2,9 @@ package br.com.java.advanced.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -17,21 +18,25 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.java.advanced.bo.BibliotecaBO;
 import br.com.java.advanced.entity.Biblioteca;
 import br.com.java.advanced.entity.Livro;
+import br.com.java.advanced.produces.RandomNumberGenerator;
 
 /**
  * @author Davi Maçana
  *
  * http://localhost:8080/AulasAvancado/biblioteca?Nome=Davi (caso tenha mais de 1 parâmetro usar "&")
  */
-@ViewScoped
+@RequestScoped
 @WebServlet(urlPatterns = "/biblioteca",
 initParams = @WebInitParam(name = "Projeto", value = "Java avançado !"))
-public class BibliotecaController extends HttpServlet {
+public class BibliotecaController extends HttpServlet implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-    private BibliotecaBO bibliotecaBO;
+    private transient BibliotecaBO bibliotecaBO;
+	
+	@Inject
+	private RandomNumberGenerator randomNumber;
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -47,11 +52,14 @@ public class BibliotecaController extends HttpServlet {
 		if (StringUtils.isNotBlank(nome)) {
 			out.println("Olá " + nome + ", bem vindo !");
 		}
-		
+		out.println("\n");
 		out.println("Nome do Projeto: " + getInitParameter("Projeto"));
-		out.println("<table border=1>");
+	    out.println("\n");
+		out.println("Número genérico de 0 a 100: " + randomNumber.getNumber());
+		out.println("\n");
 		
-        for (Livro livro : biblioteca.getLivros()) {
+		out.println("<table border=1>");
+		for (Livro livro : biblioteca.getLivros()) {
             out.println("<tr>");
             out.println("<td>" + livro.getId() + "</td>");
             out.println("<td>" + livro.getIsbn() + "</td>");
