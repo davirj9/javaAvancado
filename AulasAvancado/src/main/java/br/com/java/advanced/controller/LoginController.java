@@ -3,7 +3,7 @@ package br.com.java.advanced.controller;
 import java.io.IOException;
 import java.io.Serializable;
 
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.ServletException;
@@ -22,7 +22,7 @@ import br.com.java.advanced.qualifier.ServicoLogin;
  * @author Davi Maçana
  *
  */
-@ViewScoped
+@SessionScoped
 @WebServlet(name = "login", urlPatterns = { "/login"})
 @Named
 public class LoginController extends HttpServlet implements Serializable {
