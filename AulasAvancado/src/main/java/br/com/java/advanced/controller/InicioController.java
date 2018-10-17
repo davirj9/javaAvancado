@@ -2,6 +2,7 @@ package br.com.java.advanced.controller;
 
 import java.io.IOException;
 
+import javax.faces.view.ViewScoped;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Davi Maçana
  *
  */
+@ViewScoped
 @WebServlet(name = "inicio", urlPatterns = { "/inicio"})
 public class InicioController extends HttpServlet {
 

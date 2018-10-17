@@ -3,6 +3,7 @@ package br.com.java.advanced.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -20,8 +21,9 @@ import br.com.java.advanced.entity.Livro;
 /**
  * @author Davi Maçana
  *
- * http://localhost:8080/AulasAvancado/bibliotecaController?Nome=Davi (caso tenha mais de 1 parâmetro usar "&")
+ * http://localhost:8080/AulasAvancado/biblioteca?Nome=Davi (caso tenha mais de 1 parâmetro usar "&")
  */
+@ViewScoped
 @WebServlet(urlPatterns = "/biblioteca",
 initParams = @WebInitParam(name = "Projeto", value = "Java avançado !"))
 public class BibliotecaController extends HttpServlet {

@@ -5,7 +5,7 @@
 	<%@ include file="template/header.jsp"%>
 	<link rel="stylesheet" href="template/css/login.css" type="text/css" />
 <body>
-	<div id="form-container" align="center">
+	<div id="form-container" style="width: 30%;">
 		<form action="/AulasAvancado/login" method="post">
 		       <h1 class="text-center">Login</h1>
 		
