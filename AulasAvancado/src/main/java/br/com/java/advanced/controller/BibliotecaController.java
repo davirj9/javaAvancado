@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.naming.Context;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
