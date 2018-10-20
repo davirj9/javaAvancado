@@ -14,4 +14,28 @@ Wildfly: 12.0.0.Final </br>
   http://wildfly.org/downloads/
   </br>
   
-  
+	Projeto1:
+	 Aulas:
+		Java EE
+		Servlet
+		CDI
+		EJB
+		Security
+		JMS
+   
+	Projeto2:
+	 Aulas:
+		Spring MVC
+		JPA
+		Hibernate
+		
+	Projeto3:
+	 Aulas:
+		JAX-WS (SOAP Web Services)
+		JAX-RS (RESTful Web Services)
+
+	Projeto4:
+	 Aulas:
+		JSF
+		Primefaces
+		Hibernate
