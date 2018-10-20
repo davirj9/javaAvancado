@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="template/css/login.css" type="text/css" />
 <body>
 	<div id="form-container" style="width: 30%;">
-		<form action="/AulasAvancado/login" method="post">
+		<form action="/Projeto1/login" method="post">
 		       <h1 class="text-center">Login</h1>
 		
 		       <div class="form-group">

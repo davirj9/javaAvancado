@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.naming.Context;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +23,7 @@ import br.com.java.advanced.produces.RandomNumberGenerator;
 /**
  * @author Davi Maçana
  *
- * http://localhost:8080/AulasAvancado/biblioteca?Nome=Davi (caso tenha mais de 1 parâmetro usar "&")
+ * http://localhost:8080/Projeto1/biblioteca?Nome=Davi (caso tenha mais de 1 parâmetro usar "&")
  */
 @RequestScoped
 @WebServlet(urlPatterns = "/biblioteca",

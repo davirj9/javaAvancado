@@ -70,7 +70,7 @@ prop.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
 final Context context = new InitialContext(prop);
 
 BibliotecaServicesRemote bibliotecaService = (BibliotecaServicesRemote) 
-	context.lookup("ejb:/AulasAvancado/BibliotecaServices!br.com.java.advanced.ejb.BibliotecaServicesRemote"); 
+	context.lookup("ejb:/Projeto1/BibliotecaServices!br.com.java.advanced.ejb.BibliotecaServicesRemote"); 
 	
 	
 Pronto, após isso você pode rodar o seu projeto e usar seu serviço remoto.

@@ -6,7 +6,7 @@
 <body>
 	<%-- <%@ include file="template/menu.jsp"%> --%>
 	<div class="container">
-		<form action="/AulasAvancado/inicio" method="post">
+		<form action="/Projeto1/inicio" method="post">
 			<p>Consulte um livro:</p>
 			<input type="text" name="livro">
 			<input type="submit" value="Enviar">

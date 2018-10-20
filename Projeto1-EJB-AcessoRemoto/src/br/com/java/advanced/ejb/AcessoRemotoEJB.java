@@ -23,7 +23,7 @@ public class AcessoRemotoEJB {
         final Context context = new InitialContext(prop);
         
         BibliotecaServicesRemote bibliotecaService = (BibliotecaServicesRemote) 
-        		context.lookup("ejb:/AulasAvancado/BibliotecaServices!br.com.java.advanced.ejb.BibliotecaServicesRemote");
+        		context.lookup("ejb:/Projeto1/BibliotecaServices!br.com.java.advanced.ejb.BibliotecaServicesRemote");
         
         System.out.println(bibliotecaService.consulta());
         

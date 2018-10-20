@@ -30,7 +30,7 @@ public class InicioController extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("Atributo session", "Atributo session");*/
 		
-		request.getRequestDispatcher("/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/inicio.jsp").forward(request, response);
 	}
 	
 	@Override

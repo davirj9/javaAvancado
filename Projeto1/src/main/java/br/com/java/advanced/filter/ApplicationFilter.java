@@ -20,10 +20,10 @@ import javax.servlet.http.HttpSession;
 @WebFilter(filterName = "applicationFilter" ,urlPatterns = {"/inicio", "/*.jsp"})
 public class ApplicationFilter implements Filter {
 
-	//FilterConfig config;  
+	FilterConfig config;  
 	  
 	public void init(FilterConfig config) throws ServletException {  
-	    //this.config=config;  
+	    this.config=config;  
 	} 
 	
 	@Override
