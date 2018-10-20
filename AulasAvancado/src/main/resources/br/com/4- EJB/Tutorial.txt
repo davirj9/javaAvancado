@@ -1,0 +1,76 @@
+Passo 01:
+Para criar um Session Bean no Eclipse podemos utilizar o wizard. 
+Para acessá-lo clique com o botão direito do mouse no pacote, 
+que está dentro do projeto e escolha a opção new -> Session Bean (EJB 3.x).
+
+Passo 02:
+Wizard: Dentro do wizard tem as seguintes opções:
+- Stateless
+- Stateful 
+- Singleton 
+São session beans você pode optar por acesso Local e/ou Remoto.
+
+Passo 03: 
+Dentro do standalone do wildFly alterar a tag "interfaces", conforme abaixo:
+<interfaces>
+        <interface name="management">
+            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
+        </interface>
+        <interface name="public">
+            <any-address/>
+        </interface>
+        <interface name="unsecure">
+            <inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/>
+        </interface>
+</interfaces>
+
+Passo 04:
+Dentro da pasta bin do servidor tem um bat para criar usuário para o console administrativo do jboss ex.:
+C:\servidores\wildfly-12.0.0.Final\bin\add-user.bat
+Criar um usuário para acesso ao EJB.
+
+Pronto ! agora é só publicar seu EJB.
+Agora, para testar o seu EJB Remoto, você pode criar um projeto standalone. Vamos ao passo a passo.
+
+Passo 01:
+Criar um projeto:
+menu file -> new -> Project -> Java Project.
+
+Passo 02:
+Copiar sua interface remota criada para dentro do projeto standalone.
+
+Passo 03:
+Você irá perceber que sua classo está com erro, pois precisa de um jar.
+Vá ao build path do projeto e inclua o external jar "jboss-client.jar" 
+que se encontra dentro da pasta client do servidor , segue exemplo:
+C:\servidores\wildfly-12.0.0.Final\bin\client\jboss-client.jar
+Pronto, erro sanado !
+
+Passo 04:
+Crie um arquivo dentro do classpath do seu projeto com nome jboss-ejb-client.properties seguindo a estrutura abaixo:
+endpoint.name=client-endpoint
+remote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false
+  
+remote.connections=default
+  
+remote.connection.default.host=127.0.0.1
+remote.connection.default.port=8080
+remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false
+ 
+remote.connection.default.username=admin
+remote.connection.default.password=admin
+
+Obs.: o host e a porta você deve colocar de acordo com a sua configuração, o mesmo serve para usuário e password.
+
+Passo 05:
+Crie uma classe com "public static void main ...." e siga o exemplo abaixo:
+
+Properties prop = new Properties();
+prop.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+final Context context = new InitialContext(prop);
+
+BibliotecaServicesRemote bibliotecaService = (BibliotecaServicesRemote) 
+	context.lookup("ejb:/AulasAvancado/BibliotecaServices!br.com.java.advanced.ejb.BibliotecaServicesRemote"); 
+	
+	
+Pronto, após isso você pode rodar o seu projeto e usar seu serviço remoto.

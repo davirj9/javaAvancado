@@ -5,6 +5,7 @@ import javax.inject.Inject;
 
 import br.com.java.advanced.bo.BibliotecaBO;
 import br.com.java.advanced.entity.Biblioteca;
+import br.com.java.advanced.entity.Usuario;
 
 /**
  * @author DaviMacana
@@ -31,6 +32,11 @@ public class BibliotecaServices implements BibliotecaServicesRemote {
 	@Override
 	public String consulta() {
 		return "Consulta realizada com sucesso !";
+	}
+	
+	@Override 
+	public Usuario consultaUsuario() {
+		return new Usuario("Davi","123");
 	}
 	
 }
