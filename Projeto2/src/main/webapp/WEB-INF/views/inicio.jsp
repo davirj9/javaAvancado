@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hello Spring MVC</h1>
+<h1>Bem vindo ao módulo Spring MVC.</h1>
 <h2>${teste }</h2>
 </body>
 </html>

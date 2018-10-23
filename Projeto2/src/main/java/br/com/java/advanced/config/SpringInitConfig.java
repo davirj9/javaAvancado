@@ -2,6 +2,10 @@ package br.com.java.advanced.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * @author Davi Maçana
+ *
+ */
 public class SpringInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override

@@ -10,8 +10,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import br.com.java.advanced.conversor.TipoSexoConverter;
-
+/**
+ * @author Davi Maçana
+ *
+ */
 @Configuration
 public class SpringMvcConfig extends WebMvcConfigurerAdapter {
 
@@ -31,7 +33,6 @@ public class SpringMvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
-		registry.addConverter(new TipoSexoConverter());
 	}
 	
 	@Bean

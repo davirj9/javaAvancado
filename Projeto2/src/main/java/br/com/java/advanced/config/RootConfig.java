@@ -4,6 +4,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+/**
+ * @author Davi Maçana
+ *
+ */
 @Configuration
 @ComponentScan("br.com.java.advanced")
 @EnableWebMvc
