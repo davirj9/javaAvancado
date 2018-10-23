@@ -14,7 +14,7 @@ Wildfly: 12.0.0.Final </br>
   http://wildfly.org/downloads/
   </br>
   
-	Projeto1 e Projeto2:
+	Projeto1 e Projeto1(EJB-AcessoRemoto):
 	 Aulas:
 		Java EE
 		Servlet
@@ -23,18 +23,18 @@ Wildfly: 12.0.0.Final </br>
 		Security
 		JMS
    
-	Projeto3:
+	Projeto2:
 	 Aulas:
 		Spring MVC
 		JPA
 		Hibernate
 		
-	Projeto4:
+	Projeto3:
 	 Aulas:
 		JAX-WS (SOAP Web Services)
 		JAX-RS (RESTful Web Services)
 
-	Projeto5:
+	Projeto4:
 	 Aulas:
 		JSF
 		Primefaces
