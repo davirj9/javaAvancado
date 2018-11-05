@@ -1,2 +1,3 @@
-Repositório GIT tutorial java ee 8:
+Repositorio GIT tutorial java ee 8:
 https://github.com/javaee/tutorial-examples.git
+http://dontpad.com/javaAvancado
